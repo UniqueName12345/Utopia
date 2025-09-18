@@ -39,7 +39,22 @@ ArrayList<Gut> guts;
 boolean followSpecimen = false;
 float PLANT_GROWTH_SPEED = 4.0;
 
-String[] PRIORITY_NAMES = {"Hunger", "Thirst", "Freaky", "Eepy", "Flee Monsters"};
+boolean VIBES_MODE = true; // silly names for priorities
+
+String[] PRIORITY_NAMES_FORMAL = {
+  "Hunger", "Thirst", "Reproduction", "Sleepiness", "Flee Monsters"
+};
+
+String[] PRIORITY_NAMES_SILLY = {
+  "Munchies", "Sippy", "Freaky", "Eepy", "Spooked"
+};
+final int PRIORITY_COUNT = PRIORITY_NAMES_FORMAL.length;
+
+// Helper
+String pname(int i){
+  return (VIBES_MODE ? PRIORITY_NAMES_SILLY : PRIORITY_NAMES_FORMAL)[i];
+}
+
 color[] PRIORITY_COLORS = {color(150,100,50), color(0,0,255), color(255,0,255), color(128,255,0), color(255,0,0)};
 float[] PRIORITY_CAPS = {0.0,0.0,0.2,0.6,0.0};
 

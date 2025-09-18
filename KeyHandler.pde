@@ -1,5 +1,5 @@
 class KeyHandler{
-  int[] KEYS = {65,87,68,83,32,16,10,67};
+  int[] KEYS = {65,87,68,83,32,16,10,67,86}; // add V
   int LEN = KEYS.length;
   boolean[] keysDown = new boolean[LEN];
   public KeyHandler(){
@@ -19,6 +19,9 @@ class KeyHandler{
       }
       if(i == 7 && KEYS[i] == k && state){
         followSpecimen = !followSpecimen;
+      }
+      if (i == 8 && KEYS[i] == k && state) {
+        VIBES_MODE = !VIBES_MODE;
       }
     }
   }

@@ -19,8 +19,8 @@ class Trait{
     player = p;
     size = 0;
     if(DETAILED){
-      priorities = new float[PRIORITY_NAMES.length];
-      for(int i = 0; i < PRIORITY_NAMES.length; i++){
+      priorities = new float[PRIORITY_COUNT];
+      for(int i = 0; i < PRIORITY_COUNT; i++){
         priorities[i] = random(0,1);
       }
       priorities[0] = startingHunger;
@@ -95,7 +95,7 @@ class Trait{
       display.textAlign(RIGHT);
       display.textSize(16);
       display.fill(255);
-      display.text(PRIORITY_NAMES[p],-5,20);
+      display.text(pname(p), -5, 20);
       
       display.popMatrix();
     }
